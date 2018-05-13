@@ -1,4 +1,4 @@
-<h1>Listing posts</h1>
+<h1>Listing users</h1>
 
 <%= link_to 'New User', new_user_path %><br>
 
@@ -6,12 +6,23 @@
   <tr>
     <th>Title</th>
     <th>Text</th>
+    <th></th>
+    <th></th>
   </tr>
 
-  <% @user.each do |user| %>
-    <tr>
-      <td><%= user.title %></td>
-      <td><%= user.text %></td>
-    </tr>
-  <% end %>
+<% @user.each do |user| %>
+  <tr>
+    <td><%= user.title %></td>
+    <td><%= user.text %></td>
+    <td><%= link_to 'Show', user %></td>
+    <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    <!--
+          link_to sends a "GET" request and asks for #show function
+          button_to sends sends the "DELETE" request and asks for #destroy function
+    -->
+    <td><%= button_to 'Destroy', user_path(user),
+                               method: :delete  %>
+    </td>
+  </tr>
+<% end %>
 </table>
