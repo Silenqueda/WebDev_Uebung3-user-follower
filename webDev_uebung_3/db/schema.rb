@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180513112909) do
+ActiveRecord::Schema.define(version: 20180513153336) do
+
+  create_table "followers", force: true do |t|
+    t.string   "follower"
+    t.text     "body"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "followers", ["user_id"], name: "index_followers_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "title"
