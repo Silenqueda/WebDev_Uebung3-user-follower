@@ -40,3 +40,8 @@ wenn failed:
       run 'rails server' oder  'rails s'
 
       (https://stackoverflow.com/questions/20126316/could-not-verify-the-ssl-certificate-for-https-rubygems-org)
+
+
+
+Quelle:
+http://guides.rubyonrails.org/v4.0.8/getting_started.html
