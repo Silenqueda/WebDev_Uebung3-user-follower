@@ -1,0 +1,17 @@
+<h1>Listing posts</h1>
+
+<%= link_to 'New User', new_user_path %><br>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+
+  <% @user.each do |user| %>
+    <tr>
+      <td><%= user.title %></td>
+      <td><%= user.text %></td>
+    </tr>
+  <% end %>
+</table>
