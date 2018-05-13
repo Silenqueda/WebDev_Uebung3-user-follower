@@ -8,7 +8,7 @@ class FollowersController < ApplicationController
 
   def destroy
     @user = User.find(params[:user_id])
-    @follower = @user.follower.find(params[:id])
+    @follower = @user.followers.find(params[:id])
     @follower.destroy
 
     redirect_to user_path(@user)

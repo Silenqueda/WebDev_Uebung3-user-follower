@@ -1,8 +1,22 @@
 
 
+<p>
+  <strong>User:</strong>
+  <%= @user.title %>
+</p>
 
+<p>
+  <strong>Message:</strong>
+  <%= @user.text %>
+</p>
 
+<h2>Follower</h2>
+<%= render @user.followers %>
 
+<h2>Add follower:</h2>
+<%= render "followers/form" %>
+
+<!--
 <p>
   <strong>Title:</strong>
   <%= @user.title %>
@@ -40,7 +54,7 @@
     <%= f.submit %>
   </p>
 <% end %>
-
+-->
 
 
 <%= link_to 'Back', users_path %>
