@@ -1,0 +1,17 @@
+
+
+<p>
+  <strong>Follower:</strong>
+  <%= follower.follower %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= follower.body %>
+</p>
+
+<p>
+  <%= link_to 'Destroy Follower', [follower.user, follower],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>
